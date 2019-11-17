@@ -299,7 +299,7 @@ public class Select extends Element {
 		try {
 			Thread.sleep(2000);
 			Log.info("back to cart from page from address ");
-			click("xpath=//android.view.ViewGroup//android.widget.ImageButton[@content-desc='Back Button']");
+//			click("xpath=//android.view.ViewGroup//android.widget.ImageButton[@content-desc='Back Button']");
 			Thread.sleep(1000);
 			makeCartEmpty();
 			flag=true;
