@@ -63,10 +63,11 @@ public class Select extends Element {
 					click("xpath=//android.view.ViewGroup//android.widget.ImageButton[@content-desc='Back Button']");
 					
 				}
-				if(flag=deliveryAddress()) 
+				if(flag=isElementPresent("xpath=//android.widget.EditText[@resource-id='pincode']")) 
 				{
-				Log.info("CheckOut is complated successfully");
+				deliveryAddress();
 				}
+				Log.info("CheckOut is complated successfully");
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
