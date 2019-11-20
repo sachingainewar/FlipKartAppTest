@@ -1,5 +1,8 @@
 # FlipKartAppTest
-Log4j 
+Log4j -console ,txt, html
 Allure report
 driver factory
 desire capabilities 
+testNG
+Maven -deploy
+
