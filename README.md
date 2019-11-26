@@ -1,5 +1,5 @@
 # FlipKartAppTest
-1. Log4j configuration : to get logs on -console ,txt, html format
+## 1. Log4j configuration : to get logs on -console ,txt, html format
 
   Project is configured with log4j for debug logs. 
   How to configure project with log4j property follow the link https://sachingainewar.blogspot.com/2019/11/log4j-implementation-to- generates-logs.html
@@ -7,23 +7,23 @@
 
 
 
-2. Project is configured with reporting system "Allure report"
+## 2. Project is configured with reporting system "Allure report"
 http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-with.html
 
 
 
 
-3.  driver factory:
+## 3.  driver factory:
      src.test.java.test.FlipKart.CreateDriver.java
      is an example for creating the private instance of driver with ThreadLocal class 
 
 
-4.  desire capabilities:
+## 4.  desire capabilities:
     src/test/java/test/FlipKart/AppiumServerJava.java is an example for appium configuration 
     
 
 
-5. testNG:  Add testNG dependancy in pom.xml 
+## 5. testNG:  Add testNG dependancy in pom.xml 
    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -33,12 +33,12 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 		</dependency>
         
         
-6. Maven -deploy:
+## 6. Maven -deploy:
 
 
-7. Challenges :
+## 7. Challenges:
 
-    7.1.   Pop-up handling : 
+     ### 7.1.   Pop-up handling : 
     
 ///       Used the logic of "Goto the window by using tab and click on Ok button"
 
