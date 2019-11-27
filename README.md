@@ -38,21 +38,22 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 
 ## 7. Challenges:
 
-     ### 7.1.   Pop-up handling : 
+   ### 7.1. Pop-up handling : 
     
-///       Used the logic of "Goto the window by using tab and click on Ok button"
+```/Used the logic of "Goto the window by using tab and click on Ok button"
 
-         Function " alertHandle() " -  in Class "src/test/java/test/FlipKart/Select.java"
+      Function " alertHandle() " -  in Class "src/test/java/test/FlipKart/Select.java"
+  ```
   
-    7.2.   Handle click on Button whose clickable=‘False’
+   ### 7.2.   Handle click on Button whose clickable=‘False’
     
     //handle automate React Native application & I want to click on Button which does not have any Resource ID and content-desc and button is clickable=‘False’
     
     new TouchAction((MobileDriver) driver).press(618,1791).waitAction().moveTo(1059,1896).release().perform();
     
     
-    7.3.  Element identify  with concaniating xpath: 
+  ### 7.3.  Element identify  with concaniating xpath: 
     xpath=//android.view.ViewGroup//android.widget.ImageButton[@content-desc='Back Button']
     
-    7.4  Separated enum class for identification of locators' 
+  ###  7.4  Separated enum class for identification of locators' 
        FlipKartAppTest/src/test/java/test/FlipKart/LocatorType.java
