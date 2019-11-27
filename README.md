@@ -56,4 +56,92 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
     xpath=//android.view.ViewGroup//android.widget.ImageButton[@content-desc='Back Button']
     
   ###  7.4  Separated enum class for identification of locators' 
-       FlipKartAppTest/src/test/java/test/FlipKart/LocatorType.java
+    ```   FlipKartAppTest/src/test/java/test/FlipKart/LocatorType.java
+       //follow the formate of locators like "xpath=//*[@id='abc'], class="abc", id="asa",etc ". So first separate string by (=).
+       	public By getLocator(String locator, LocatorType xpt) {
+		By by = null;
+			switch (xpt) {
+			case xpath:
+				by = MobileBy.xpath(locator);
+				break;
+			case classname:
+				by = MobileBy.className(locator);
+				break;
+			case id:
+				by = MobileBy.id(locator);
+				break;
+			default:
+				by = MobileBy.xpath(locator);
+				break;
+			}
+		return by;
+	}
+	// finally use the By class to get the element 
+	By by = getMobileLocator(locator, identifier);
+	element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
+       ```
+      
+  ### 7.5 Scroll on all directions 
+    ``` public static void swipe(MobileDriver driver, DIRECTION direction, long duration) {
+    Dimension size = driver.manage().window().getSize();
+
+    int startX = 0;
+    int endX = 0;
+    int startY = 0;
+    int endY = 0;
+
+    switch (direction) {
+        case RIGHT:
+            startY = (int) (size.height / 2);
+            startX = (int) (size.width * 0.90);
+            endX = (int) (size.width * 0.05);
+            new TouchAction(driver)
+                    .press(startX, startY)
+                    .waitAction(Duration.ofMillis(duration))
+                    .moveTo(endX, startY)
+                    .release()
+                    .perform();
+            break;
+
+        case LEFT:
+            startY = (int) (size.height / 2);
+            startX = (int) (size.width * 0.05);
+            endX = (int) (size.width * 0.90);
+            new TouchAction(driver)
+                    .press(startX, startY)
+                    .waitAction(Duration.ofMillis(duration))
+                    .moveTo(endX, startY)
+                    .release()
+                    .perform();
+
+            break;
+
+        case UP:
+            endY = (int) (size.height * 0.70);
+            startY = (int) (size.height * 0.30);
+            startX = (size.width / 2);
+            new TouchAction(driver)
+                    .press(startX, startY)
+                    .waitAction(Duration.ofMillis(duration))
+                    .moveTo(endX, startY)
+                    .release()
+                    .perform();
+            break;
+
+
+        case DOWN:
+            startY = (int) (size.height * 0.70);
+            endY = (int) (size.height * 0.30);
+            startX = (size.width / 2);
+            new TouchAction(driver)
+                    .press(startX, startY)
+                    .waitAction(Duration.ofMillis(duration))
+                    .moveTo(startX, endY)
+                    .release()
+                    .perform();
+
+            break;
+
+    }
+} ```
+
