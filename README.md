@@ -145,3 +145,33 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
     }
 } ```
 
+
+  ### 8 Initialized Simulator (BrowserStack) and run the code in BrowserStack 
+  ```
+       static Common getMethod = new Common();
+	public static RemoteWebDriver driver;
+	static Properties properties = new Properties();
+	static int count = 0;
+	public static final String USERNAME = "sachin510";
+	public static final String AUTOMATE_KEY = properties.getProperty("AuthKey");
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+	static Delay delay = new Delay();
+
+	@BeforeTest
+	public void setConnectionToBroserStack() throws InterruptedException, ExecuteException, IOException {
+		// Initializing command line parameters...
+
+		CommandLine cmdLine = new CommandLine("cmd.exe");
+		cmdLine.addArgument(
+				"C:\\Users\\sgainewar>\\Documents\\new\\9-1-2018\\BrowserStackLocal.exe --key zKpP3Muz6StvsebgqUqm");
+		/*
+		 * cmdLine.addArgument("--key");
+		 * cmdLine.addArgument("zKpP3Muz6StvsebgqUqm");
+		 */
+		System.out.println(cmdLine);
+		DefaultExecutor executor = new DefaultExecutor();
+		int exitValue = executor.execute(cmdLine);
+		System.out.println(exitValue);
+	}
+```
+NOTE: Just BrowserStack initialization code added but not configured, means cant directlty run code on browserstack
