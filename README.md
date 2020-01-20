@@ -148,6 +148,10 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 
   ### 8 Initialized Simulator (BrowserStack) and run the code in BrowserStack 
   ```
+  NOTE: Just BrowserStack initialization code added but not configured, means cant directlty run code on browserstack
+
+
+
        static Common getMethod = new Common();
 	public static RemoteWebDriver driver;
 	static Properties properties = new Properties();
@@ -174,4 +178,3 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 		System.out.println(exitValue);
 	}
 ```
-NOTE: Just BrowserStack initialization code added but not configured, means cant directlty run code on browserstack
