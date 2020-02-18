@@ -178,3 +178,33 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 		System.out.println(exitValue);
 	}
 ```
+
+
+### Emulcator configuration (ie BrowserStack) 
+        static Common getMethod = new Common();
+	public static RemoteWebDriver driver;
+	static Properties properties = new Properties();
+	static int count = 0;
+	public static final String USERNAME = "xxxxxxxx";
+	public static final String AUTOMATE_KEY = ("AuthKey");
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+	static Delay delay = new Delay();
+
+	
+	public void setConnectionToBroserStack() throws InterruptedException, ExecuteException, IOException {
+		// Initializing command line parameters...
+
+		CommandLine cmdLine = new CommandLine("cmd.exe");
+		cmdLine.addArgument(
+				"C:\\Users\\sgainewar>\\Documents\\new\\9-1-2018\\BrowserStackLocal.exe --key xxxxxxxxx");
+		/*
+		 * cmdLine.addArgument("--key");
+		 * cmdLine.addArgument("xxxxxxxxxxxx");
+		 */
+		System.out.println(cmdLine);
+		DefaultExecutor executor = new DefaultExecutor();
+		int exitValue = executor.execute(cmdLine);
+		System.out.println(exitValue);
+	}
+	
+
