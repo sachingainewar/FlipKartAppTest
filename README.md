@@ -180,7 +180,7 @@ http://sachingainewar.blogspot.com/2019/11/allure-report-system-configuration-wi
 ```
 
 
-### Emulcator configuration (ie BrowserStack) 
+### 9.  Emulcator configuration (ie BrowserStack) 
         static Common getMethod = new Common();
 	public static RemoteWebDriver driver;
 	static Properties properties = new Properties();
