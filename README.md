@@ -2,7 +2,7 @@
 ## 1. Log4j configuration : to get logs on -console ,txt, html format
 
   Project is configured with log4j for debug logs. 
-  How to configure project with log4j property follow the link https://sachingainewar.blogspot.com/2019/11/log4j-implementation-to- generates-logs.html
+  How to configure project with log4j property follow the link https://sachingainewar.blogspot.com/2019/11/log4j-implementation-to-generates-logs.html
 
 
 
